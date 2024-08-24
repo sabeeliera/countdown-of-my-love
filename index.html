@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments"># I have confessed a lot,</span><br/>
+			<span class="comments"># but I just wanna confess again in coder's way.</span><br/>
+			<span class="comments">##</span><br/>
+			i = Girl(<span class="string">"Saba"</span>);<br/>
+			u = Boy(<span class="string">"Mithu"</span>);<br/>
+			<span class="comments"># Feb 09, 2023 </span><br/>
+			I started to notice you and fall for you, yet I wasn't actually sure so I gave myself more time<br/>
+			<span class="comments"># Jun 06, 2023. </span><br/>
+			I noticed that I have completely fallen for you and my love for you growing day by day<br/>
+			<span class="comments"># Nov 17, 2023. </span><br/>
+			I finally prepared myself to knock you<br/>
+			<span class="comments"># Feb 10, 2024</span><br/>
+			I finally confessed to you in silliest way. But you told me we can remain friends :C I wanted to kick you that time<br/>
+			I was not sure if I should confess to my love but, it was the best decision I have ever made</br>
+			<span class="comments"># Mar 09, 2024. </span><br/>
+			The dreamiest night our first date. It was my first ever date so I was awkward and nervous<br/>
+			<span class="comments"># Since then, we spent happiest life every day.</span><br/>
+			It was only after meeting you I got to know what life really is. It's only I met you, I got to know how it feels to be breathing</br> 
+			It is like I have been dead this entire time. You are the one. It's you who taught me how to love</br> 
+			It's you who brought me back to life<br/>
+			<span class="comments"># We enjoy everything together.</span><br/>
+			<span class="comments"># You are my whole universe. </span><br/>
+			<span class="comments"># I wanna be with you forever.</span><br/>
+			<span class="comments"># We will enjoy whole world together.</span><br/>
+			Let me take an oath to never stop loving you<br/>
+			To never leave you no matter what happens<br/>
+			To make sure I will be holding your hand no matter how bad the whole world gets, <br/>
+			I will never leave your side. Because babe, all the love I have, it's all for you<br/>
+
+
+			<span class="comments"># You are the greatest love of my life.</span><br/>
+			I realized that true love hurts sometimes, it does.</br>
+			You are not always going to have only happy moments. </br>
+			Happiness is not the only thing you can expect from love. But is the pain worth it all? </br>
+            If I had to go through that pain a million times,</br> 
+			I will happily choose it because it's more than just worth it</br>
+			<span class="comments"># Waiting until I become your wife, we will be the happiest couple in the world.</span><br/>
+			i.marry(u, in_the_future=<span class="keyword">True</span>)<br/>
+			i.live_happily_forever_with(u)<br/>
+			<span class="comments"># I love you forever.</span><br/>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					My love, I have fallen in love with you for
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					Love you forever and ever.<br/>
+					<div class="signature">- Yours only | Saba</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		Copyright © 2024 <a href='https://github.com/sabeeliera'>sabrina</a> 2024
+	</div>
+</div>
+<script type="text/javascript">
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	var together = new Date();
+	together.setFullYear(2023, 6, 6);
+	together.setHours(15);
+	together.setMinutes(0);
+	together.setSeconds(0);
+	together.setMilliseconds(0);
+
+	if (!document.createElement('canvas').getContext) {
+		var msg = document.createElement("div");
+		msg.id = "errorMsg";
+		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+		document.body.appendChild(msg);
+		$("#code").css("display", "none")
+		$("#copyright").css("position", "absolute");
+		$("#copyright").css("bottom", "10px");
+		document.execCommand("stop");
+	} else {
+		setTimeout(function () {
+			startHeartAnimation();
+		}, 5000);
+
+		timeElapse(together);
+		setInterval(function () {
+			timeElapse(together);
+		}, 500);
+
+		adjustCodePosition();
+		$("#code").typewriter();
+	}
+</script>
+</body>
+</html>
